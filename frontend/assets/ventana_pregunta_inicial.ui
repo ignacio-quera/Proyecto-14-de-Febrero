@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>QMainWindow</class>
+ <widget class="QMainWindow" name="QMainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>259</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>Pregunta del millón</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow {
+
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">QWidget{
+background-color: #f8c7f5;
+}</string>
+   </property>
+   <widget class="QWidget" name="verticalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>391</width>
+      <height>251</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+  font-family: Vivaldi;
+  font-size: 30px;
+  border-radius: 8px;
+  padding: 5px 15px;
+  margin-top: 10px;
+
+}</string>
+       </property>
+       <property name="text">
+        <string>¿Quieres ser mi San Valentín?</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QPushButton" name="pushButton_2">
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+  background-color: #f9eef8;
+  font-family: Vivaldi;
+  min-width: 80px;
+  min-height: 60px;
+  color: #000000;
+  font-weight: 30;
+  font-size: 30px;
+  border-radius: 8px;
+  padding: 5px 15px;
+  margin-top: 10px;
+  margin: 25px;
+  outline: 0px;
+}
+QPushButton:hover {
+    background-color: #f3bcdf;
+}</string>
+         </property>
+         <property name="text">
+          <string>No</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton">
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+  background-color: #f9eef8;
+  font-family: Vivaldi;
+  min-width: 80px;
+  min-height: 60px;
+  color: #000000;
+  font-weight: 30;
+  font-size: 30px;
+  border-radius: 8px;
+  padding: 5px 15px;
+  margin-top: 10px;
+  margin: 25px;
+  outline: 0px;
+}
+QPushButton:hover {
+    background-color: #f3bcdf;
+}</string>
+         </property>
+         <property name="text">
+          <string>Si</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,42 @@
+import sys
+import os
+from PyQt5 import uic
+from PyQt5.QtWidgets import (
+    QApplication, QMainWindow, QWidget, QVBoxLayout, QMessageBox,
+    QHBoxLayout, QCheckBox, QPushButton, QLabel, QButtonGroup, QFrame
+)
+from PyQt5.QtCore import pyqtSignal, Qt
+from PyQt5.QtGui import QColor, QPalette, QPixmap, QFont, QFontDatabase
+path = os.path.join("frontend", "assets", "ventana_pregunta_inicial.ui")
+window_name, base_class = uic.loadUiType(path)
+
+class VentanaPreguntaInicial(window_name, base_class):
+
+    senal_si = pyqtSignal()
+    senal_no = pyqtSignal()
+    
+    def __init__(self):
+        super().__init__()
+        self.setupUi(self)
+
+        self.setFixedHeight(self.height())
+        self.setFixedWidth(self.width())
+
+        self.label.setFont(QFont("Vivaldi", 20))
+        self.pushButton.clicked.connect(self.acceptance)
+        self.pushButton_2.clicked.connect(self.rejection)
+
+
+    def abrir_ventana(self):
+        # self.senal_empezar_musica.emit()
+        self.show()
+
+    def acceptance(self):
+        self.senal_si.emit()
+        self.close()
+        pass
+
+    def rejection(self):
+        self.senal_no.emit()
+        self.close()
+        pass
